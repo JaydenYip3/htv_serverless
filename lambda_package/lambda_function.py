@@ -35,7 +35,7 @@ def handle_incoming_sms(event):
 
     # Create TwiML response
     resp = MessagingResponse()
-    resp.message(f"You said: {incoming_message}")
+    resp.message(f"You said: {incoming_message, from_number}")
 
     return {
         'statusCode': 200,
